@@ -58,6 +58,7 @@ double TotalAverage(const double data[][5],int rows){
             total_value += data[i][j];
 
     return total_value/(double)15;
+    //It's me again!
 }
 
 double MaxValue(const double data[][5],int rows){
@@ -78,7 +79,6 @@ void ShowResulet(double value,int flag){
     else
         printf("\n%s%-.2f\n",max_value,value);
 }
-
 void ShowArray(const double data[][5],int rows){
     putchar('\n');
     for(int i=0; i<rows; i++){
@@ -87,3 +87,4 @@ void ShowArray(const double data[][5],int rows){
         putchar('\n');
     }
 }
+//It's me!
