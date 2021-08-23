@@ -19,7 +19,7 @@ int main(void){
     Time time[2];
 
     for(int i=0;i<=1;i++){
-        printf("Please enter the %dst(ed) time: ", i+1);
+        printf("Please enter the %dst(ed) time(H:M:S): ", i+1);
         scanf("%d:%d:%d",&time[i].hour,&time[i].minute,&time[i].second);
         getchar();
     }

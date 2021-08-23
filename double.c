@@ -2,7 +2,7 @@
 
 double Cube(double cube);
 
-double main(void){
+int main(void){
     double cube;
     scanf("%lf",&cube);
     printf("The cube of %.3f.\n",cube);
