@@ -1,4 +1,6 @@
 .gitignore
+single_file.out
+test.c
 .clang-format
 cmake-build-debug/
 CMakeLists.txt
