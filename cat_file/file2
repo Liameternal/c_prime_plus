@@ -1,0 +1,42 @@
+###############################################################################
+#                           tmux_status_line
+###############################################################################
+set -g status-right "#{?window_bigger,[#{window_offset_x}#,#{window_offset_y}] ,} #H Continuum status:#{continuum_status} %H:%M %d-%b-%y"
+set -g status-right-length "80"
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'github_username/plugin_name#branch'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+# for vim
+set -g @resurrect-strategy-vim 'session'
+# kill session without exit
+set -g @plugin 'tmux-plugins/tmux-sessionist'
+
+
+# initialize tmux plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+
+###############################################################################
+#                           tmux-continuum
+###############################################################################
+set -g @continuum-restore 'on'
+set -g @continuum-save-interval '5'
+
+###############################################################################
+#                           tmux
+###############################################################################
+# kill-server
+bind-key K kill-server
+# clear screen like in bash
+bind C-l send-keys 'C-l'
+set-option -g mouse on
+

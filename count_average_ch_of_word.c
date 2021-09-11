@@ -16,18 +16,14 @@ int main(void) {
         if (isalpha(ch)) {
             is_word = true;
             alpha++;
-            ch_front = ch;
             continue;
-        }
-        if ((ispunct(ch) || isspace(ch)) && is_word) {
-            word++;
-            is_word = false;
-            ch_front = ch;
-            continue;
+        } else {
+            if (is_word) {
+                word++;
+                is_word = false;
+            }
         }
     }
-    if (isalpha(ch_front))
-        word++;
     if (!word) {
         printf("Not a single  word is entered.\n");
         exit(1);

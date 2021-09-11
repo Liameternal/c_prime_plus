@@ -67,3 +67,4 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+!/count_ch_in_files/count_ch.c

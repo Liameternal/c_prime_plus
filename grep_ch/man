@@ -1,0 +1,13 @@
+If a Linux process becomes unresponsive or is consuming too many resources, you may need to kill it.
+Most processes have their own methods of shutting down. Unfortunately, processes can malfunction and not allow themselves to be shut down. If a running background process is unresponsive, it becomes necessary to use a command to kill it.
+Here’s a complete guide on how to kill a Linux process using the command line.
+iWhat Processes Can You Kill in Linux?
+Before killing or terminating a process, you need to consider permissions.
+A root user can kill all processes. You can either add sudo before a command to run it as root, or obtain a root shell with su. Then execute the command.
+Killing a process sends a termination message to the given process. There are multiple types of termination messages including:
+SIGKILL – SIGKILL is the ultimate way of killing a process. It will always kill a process and will kill the process abruptly, generating a fatal error. SIGKILL should always work. If it does not work, the operating system has failed.
+SIGTERM – SIGTERM attempts to kill a process, but unlike SIGKILL it may be blocked or otherwise handled. It can be considered a gentler way of attempting to terminate a process.
+For most purposes, SIGKILL will be the fastest and most effective method to terminate the process.
+Step 1: View Running Linux Processes
+The top command is the easiest way to get a complete overview of the processes currently being run.
+To view a list of all currently running processes, use the command:
